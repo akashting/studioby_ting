@@ -2472,6 +2472,13 @@
 					$("span").removeClass("active");
 					$(this).addClass("active");
 				});
+
+				//fetch data from json file
+				$.getJSON("data/data.json", function (result) {
+					$.each(result, function (i, field) {
+						$("div").append(field + " ");
+					});
+				});
 			});
 		</script>
 	</body>
